@@ -114,7 +114,12 @@
         <div class="col-md-8">
             
           <label class="mt-2" for="isi">Nama Lengkap</label>
-          <input class="form-control" id="nama" name="nama" placeholder="">
+          <input class="form-control" id="nama" name="nama" value="{{ old('nama') }}">
+          @error('nama')
+            <div>
+              <span class="text-danger">{{ $message }}</span>
+            </div>
+          @enderror
 
           <label class="mt-2" for="isi">Jenis Kelamin</label>
             <select class="form-control" id="kelamin" name="kelamin">
@@ -123,33 +128,76 @@
             </select>
             
           <label class="mt-2" for="isi">Asal Institusi Pendidikan</label>
-          <input class="form-control" id="institusi" name="institusi" placeholder="">
+          <input class="form-control" id="institusi" name="institusi" value="{{ old('institusi') }}">
+          @error('institusi')
+            <div>
+              <span class="text-danger">{{ $message }}</span>
+            </div>
+          @enderror
     
           <label class="mt-2" for="isi">Jurusan</label>
-          <input class="form-control" id="jurusan" name="jurusan" placeholder="">
+          <input class="form-control" id="jurusan" name="jurusan" value="{{ old('jurusan') }}">
+          @error('jurusan')
+            <div>
+              <span class="text-danger">{{ $message }}</span>
+            </div>
+          @enderror
+          
+          <label class="mt-2" for="isi">Nomor HP</label>
+          <input class="form-control" id="nomor_hp" name="nomor_hp" value="{{ old('nomor_hp') }}">
+          @error('nomor_hp')
+            <div>
+              <span class="text-danger">{{ $message }}</span>
+            </div>
+          @enderror
 
           <label class="mt-2" for="isi">Alamat</label>
-          <input class="form-control" id="alamat" name="alamat" placeholder="">
+          <input class="form-control" id="alamat" name="alamat" value="{{ old('alamat') }}">
+          @error('alamat')
+            <div>
+              <span class="text-danger">{{ $message }}</span>
+            </div>
+          @enderror
             
           <label class="mt-2" for="isi">Unit PKL/Magang</label>
           <input class="form-control" name="unit" type="text" placeholder="{{ $units->nama_unit }}" value="{{ $units->nama_unit }}" readonly>
 
           <label class="mt-3" for="isi">Motivasi Mengikuti PKL/Magang di Telkom</label>
-          <textarea class="form-control my-editor" id="motivasi" name="motivasi"></textarea>
+          <textarea class="form-control my-editor" id="motivasi" name="motivasi">{{{ old('motivasi') }}}</textarea>
+          @error('motivasi')
+            <div>
+              <span class="text-danger">{{ $message }}</span>
+            </div>
+          @enderror
 
           <div class="mb-3">
-            <label style="margin-top: 0.5cm" for="foto" class="form-label">Foto formal 3x4 atau 4x6</label>
+            <label style="margin-top: 0.5cm" for="foto" class="form-label">Foto formal 3x4 atau 4x6 (max: 1mb)</label>
             <input class="form-control" type="file" id="foto" name="foto">
+            @error('foto')
+            <div>
+              <span class="text-danger">{{ $message }}</span>
+            </div>
+          @enderror
           </div>
 
           <div class="mb-3">
-            <label style="margin-top: 0.5cm" for="surat" class="form-label">Surat Pengantar dari Sekolah/Kampus (Dalam bentuk Scan pdf)</label>
+            <label style="margin-top: 0.5cm" for="surat" class="form-label">Surat Pengantar dari Sekolah/Kampus (Dalam bentuk Scan pdf max: 1mb)</label>
             <input class="form-control" type="file" id="surat" name="surat">
+            @error('surat')
+            <div>
+              <span class="text-danger">{{ $message }}</span>
+            </div>
+          @enderror
           </div>
 
           <div class="mb-3">
-            <label style="margin-top: 0.5cm" for="formFile" class="form-label">Resume/CV</label>
+            <label style="margin-top: 0.5cm" for="formFile" class="form-label">Resume/CV (pdf max: 1mb)</label>
             <input class="form-control" type="file" id="cv" name="cv">
+            @error('cv')
+            <div>
+              <span class="text-danger">{{ $message }}</span>
+            </div>
+          @enderror
           </div>
 
           @guest

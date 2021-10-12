@@ -354,89 +354,70 @@
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="{{asset('/telkom/images/e1.jpg')}}" alt="">
+              <img src="{{asset('/telkom/images/arif.jpg')}}">
             </div>
             <div class="detail-box">
               <a href="">
-                Mark Lee
+                Muhammad Fauzi Satria Arifandy
               </a>
               <h6 class="expert_position">
                 <span>
-                  Access Optima & Area Network
+                  Web Developer di HR & CDC
                 </span>
                 <span>
                   
                 </span>
               </h6>
-              <!-- <span class="expert_rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </span> -->
               <p>
-                Disini saya belajar bagaimana jaringan internet (HSI) bekerja dari pelanggan sampai ke perangkat radius.
+                Disini saya belajar bagaimana business process dari HR & CDC kemudian mengimplementasikannya menjadi sebuah website.
               </p>
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="{{asset('/telkom/images/e2.jpg')}}" alt="">
+              <img src="{{asset('/telkom/images/kadek.jpeg')}}" alt="">
             </div>
             <div class="detail-box">
               <a href="">
-                Salsabila K
+                Kadek Dwitya Arya Sujaya
               </a>
               <h6 class="expert_position">
                 <span>
-                  UI Designer
+                  UI/UX Designer di HR & CDC
                 </span>
                 <span>
                   
                 </span>
               </h6>
-              <!-- <span class="expert_rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </span> -->
               <p>
-                Saya mendapatkan pengalaman yang berharga yaitu belajar cara membuat tampilan User Interface.
+                Saya mendapatkan pengalaman yang berharga yaitu belajar cara membuat tampilan User Interface dan User Experience.
               </p>
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="{{asset('/telkom/images/e3.jpg')}}" alt="">
+              <img src="{{asset('/telkom/images/erlyn.png')}}" alt="">
             </div>
             <div class="detail-box">
               <a href="">
-                Jeong Jaehyun
+                Berlyan Permata Sukma
               </a>
               <h6 class="expert_position">
                 <span>
-                  Consumer Service
+                  Corporate Customer Access Network (CCAN) 
                 </span>
                 <span>
                   
                 </span>
               </h6>
-              <!-- <span class="expert_rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </span> -->
               <p>
-                Banyak sekali pengalaman yang saya dapatkan salah satunya bagaimana cara melayani consumer secara baik.
+                Banyak sekali pengalaman yang saya dapatkan salah satunya melakukan pelayanan akses kepada pelanggan Enterpise, Government dan Business dengan baik.
               </p>
             </div>
           </div>

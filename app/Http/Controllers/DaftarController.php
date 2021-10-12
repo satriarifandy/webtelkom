@@ -47,11 +47,25 @@ class DaftarController extends Controller
 
     public function store(Request $request) {
 
+        $pendaftar = $request->validate([
+            'nama' => 'required',
+            'kelamin' => 'required',
+            'institusi' => 'required',
+            'jurusan' => 'required',
+            'nomor_hp' => 'required|numeric',
+            'alamat' => 'required',
+            'motivasi' => 'required',
+            'foto' => 'required|mimes:png,jpeg,jpg|max:1024',
+            'surat' => 'required|mimes:pdf|max:1024',
+            'cv' => 'required|mimes:pdf|max:1024',
+        ]);
+
         $pendaftar = new Pendaftar();
         $pendaftar->nama = request('nama');
         $pendaftar->kelamin = request('kelamin');
         $pendaftar->institusi = request('institusi');
         $pendaftar->jurusan = request('jurusan');
+        $pendaftar->nomor_hp = request('nomor_hp');
         $pendaftar->alamat = request('alamat');
         $pendaftar->unit = request('unit');
         $pendaftar->motivasi = request('motivasi');

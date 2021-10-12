@@ -121,6 +121,8 @@
                     <dd class="col-sm-8">{{ $pendaftar->institusi }}</dd>
                     <dt class="col-sm-4" style="margin-bottom: 0.7cm">Jurusan</dt>
                     <dd class="col-sm-8">{{ $pendaftar->jurusan }}</dd>
+                    <dt class="col-sm-4" style="margin-bottom: 0.7cm">Nomor HP</dt>
+                    <dd class="col-sm-8">{{ $pendaftar->nomor_hp }}</dd>
                     <dt class="col-sm-4" style="margin-bottom: 0.7cm">Alamat</dt>
                     <dd class="col-sm-8">{{ $pendaftar->alamat }}</dd>
                     <dt class="col-sm-4" style="margin-bottom: 0.7cm">Unit Pilihan</dt>

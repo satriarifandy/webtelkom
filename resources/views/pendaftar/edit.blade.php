@@ -123,12 +123,12 @@
         
               <label class="mt-2" for="isi">Jurusan</label>
               <input class="form-control" id="jurusan" name="jurusan" placeholder="" value="{{ $pendaftar->jurusan }}">
-    
+                
+              <label class="mt-2" for="isi">Nomor HP</label>
+              <input class="form-control" id="nomor_hp" name="nomor_hp" placeholder="" value="{{ $pendaftar->nomor_hp }}">
+
               <label class="mt-2" for="isi">Alamat</label>
               <input class="form-control" id="alamat" name="alamat" placeholder="" value="{{ $pendaftar->alamat }}">
-{{--                 
-              <label class="mt-2" for="isi">Unit PKL/Magang</label>
-              <input class="form-control" name="unit" type="text" placeholder="isi yang ini woiii" value="isi yang ini woiii" readonly> --}}
 
               <label class="mt-2" for="isi">Unit PKL/Magang</label>
                 <select class="form-control" id="unit" name="unit">
