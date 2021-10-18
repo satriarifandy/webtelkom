@@ -23,86 +23,86 @@
 
 <body>     
     <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-        <div class="container-fluid">
-        <nav class="navbar fixed-top navbar-expand-lg custom_nav-container" style="background-color: #08135c; border-bottom: 3px solid red">
-            <a class="navbar-brand" href="/">
-            <span style="margin-right: 0.1cm; margin-left: 0.5cm">
-                Telkom Witel NTB
-            </span>
-            </a>
-            <img src="{{asset('telkom/images/telkom_logo2.png')}}" style="width:70px;">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container-fluid">
+            <nav class="navbar fixed-top navbar-expand-lg custom_nav-container" style="background-color: #08135c; border-bottom: 3px solid red">
+                <a class="navbar-brand" href="/">
+                <span style="margin-right: 0.1cm; margin-left: 0.5cm">
+                    Telkom Witel NTB
+                </span>
+                </a>
+                <img src="{{asset('telkom/images/telkom_logo2.png')}}" style="width:70px;">
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  ml-auto">
-                <li class="nav-item active">
-                <a class="nav-link" href="/">Beranda</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/#about">Tentang Kami</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/#bidang">Bidang Praktik</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/#testimoni">Testimoni</a>
-                </li>
-                @auth
-                @php
-                  $role = Auth::user()->role;
-                @endphp
-                @if ($role == 'admin')
-                  <li class="nav-item">
-                    <a class="nav-link" href="/admin">Admin Dashboard</a>
-                  </li>
-                @endif   
-                @endauth    
-
-                @auth
-                <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent; border-color: transparent">
-                    {{ strtoupper(Auth::user()->name) }}
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""> </span>
                 </button>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="{{ route('profile.show') }}">Profile</a>
-                    <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                    this.closest('form').submit();">Logout</a>
-                </form>
-                </div>
-                </div>
-                @endauth
 
-                @guest
-                <li class="nav-item">
-                <a class="nav-link" href="/login">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <span>
-                    Masuk
-                    </span>
-                </a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/register">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <span>
-                    Registrasi
-                    </span>
-                </a>
-                </li>
-                @endguest
-            </ul>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  ml-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="/">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/#about">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/#bidang">Bidang Praktik</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/#testimoni">Testimoni</a>
+                    </li>
+                    @auth
+                    @php
+                    $role = Auth::user()->role;
+                    @endphp
+                    @if ($role == 'admin')
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">Admin Dashboard</a>
+                    </li>
+                    @endif   
+                    @endauth    
+
+                    @auth
+                    <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent; border-color: transparent">
+                        {{ strtoupper(Auth::user()->name) }}
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{{ route('profile.show') }}">Profile</a>
+                        <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        this.closest('form').submit();">Logout</a>
+                    </form>
+                    </div>
+                    </div>
+                    @endauth
+
+                    @guest
+                    <li class="nav-item">
+                    <a class="nav-link" href="/login">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span>
+                        Masuk
+                        </span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/register">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span>
+                        Registrasi
+                        </span>
+                    </a>
+                    </li>
+                    @endguest
+                </ul>
+                </div>
+            </nav>
             </div>
-        </nav>
-        </div>
-    </header>
-    <!-- end header section -->
+        </header>
+        <!-- end header section -->
     </div>
 
     @if (session('success update'))
@@ -125,20 +125,32 @@
 
     <div class="container">
         <h1 style="margin-top: 1cm; text-align: center">Pendaftar PKL Telkom Witel NTB</h1>
-        <form method="GET" action="/mencari" style="margin-top: 1cm; margin-bottom: 0.2cm">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="keyword" placeholder="Masukkan Nama Pendaftar">
-                        <div class="input-group-append">
-                          <button class="btn btn-secondary" type="submit">
-                            <i class="fa fa-search"></i>
-                          </button>
+        <div class="row">
+            <div class="col">
+                <form method="GET" action="/mencari" style="">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="keyword" placeholder="Masukkan Nama Pendaftar">
+                                <div class="input-group-append">
+                                  <button class="btn btn-secondary" type="submit">
+                                    <i class="fa fa-search"></i>
+                                  </button>
+                                </div>
+                              </div>
                         </div>
-                      </div>
-                </div>
+                    </div>
+                </form>
             </div>
-        </form>
+            {{-- <div class="col d-flex justify-content-end" style="margin-top: 0.2cm; margin-bottom: 0.3cm">
+                <a href="/exportexcel" target="_blank" class="btn" style="
+                background-color: #08135c;
+                color: white;
+                ">
+                Export to Excel 
+                </a>
+            </div> --}}
+        </div>
         <table style="margin-top: 0cm;" class="table table-hover">
             <thead>
                 <tr>
@@ -148,6 +160,7 @@
                 <th scope="col">Institusi</th>
                 <th scope="col">Jurusan</th>
                 <th scope="col">Unit Pilihan</th>
+                <th scope="col">Status</th>
                 <th scope="col" class="text-center">Aksi</th>
                 </tr>
             </thead>
@@ -160,6 +173,15 @@
                 <td style="width: 5%">{{ $value->institusi }}</td>
                 <td style="width: 5%">{{ $value->jurusan }}</td>
                 <td style="width: 15%">{{ $value->unit }}</td>
+                <td style="width: 15%">
+                    @if ($value->status == 'Belum diproses')
+                    <a class="btn btn-info" href="#" role="button">{{ $value->status }}</a>
+                    @elseif ($value->status == 'Diterima')
+                    <a class="btn btn-info" href="#" role="button">{{ $value->status }}</a>
+                    @else
+                    <a class="btn btn-info" href="#" role="button">{{ $value->status }}</a>
+                    @endif
+                </td>
                 <td style="width: 20%; text-align: center">
                     <a class="btn btn-info" href="/admin/details/{{ $value->id }}" role="button"><i class="fas fa-info-circle"></i></a>
                     <a class="btn btn-warning" href="/admin/edit/{{ $value->id }}" role="button"><i class="fas fa-pencil-alt"></i></a>

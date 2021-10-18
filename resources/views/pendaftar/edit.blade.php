@@ -140,7 +140,7 @@
               <label class="mt-3" for="isi">Motivasi Mengikuti PKL/Magang di Telkom</label>
               <textarea class="form-control my-editor" id="motivasi" name="motivasi">{{ $pendaftar->motivasi }}"</textarea>
     
-              <div class="mb-3">
+              {{-- <div class="mb-3">
                 <label style="margin-top: 0.5cm" for="formFile" class="form-label">Surat Pengantar dari Sekolah/Kampus (Dalam bentuk Scan pdf)</label>
                 <input class="form-control" type="file" id="surat" name="surat">
               </div>
@@ -148,7 +148,7 @@
               <div class="mb-3">
                 <label style="margin-top: 0.5cm" for="formFile" class="form-label">Resume/CV</label>
                 <input class="form-control" type="file" id="cv" name="cv">
-              </div>
+              </div> --}}
 
                 <div class="d-flex justify-content-end">
                     <button type="submit" class="btn-lg" style="

@@ -52,6 +52,16 @@
               <li class="nav-item">
                 <a class="nav-link" href="/#testimoni">Testimoni</a>
               </li>
+              @auth
+              @php
+                $role = Auth::user()->role;
+              @endphp
+              @if ($role == 'admin')
+                <li class="nav-item">
+                  <a class="nav-link" href="/admin">Admin Dashboard</a>
+                </li>
+              @endif   
+              @endauth 
               
 
               @auth

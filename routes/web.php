@@ -23,9 +23,14 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::view('admin', 'admin')->name('admin');
     Route::get('/unit/details/{id}/daftar',[DaftarController::class,'create']);
     Route::post('/unit/details/{id}/daftar', [DaftarController::class, 'store']);
+    Route::get('/success', function () {
+        return view('pages.success');
+    });
 });
 
 Route::get('/unit/details/{id}',[HomeController::class,'show']);
+
+Route::get('/exportexcel', [DaftarController::class,'exportexcel']);
 
 
 

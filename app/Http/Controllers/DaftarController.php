@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\PendaftarExport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Unit;
 use App\Models\Pendaftar;
+use Maatwebsite\Excel\Facades\Excel;
 
 class DaftarController extends Controller
 {
@@ -52,7 +54,7 @@ class DaftarController extends Controller
             'kelamin' => 'required',
             'institusi' => 'required',
             'jurusan' => 'required',
-            'nomor_hp' => 'required|numeric',
+            'nomor_hp' => 'required',
             'alamat' => 'required',
             'motivasi' => 'required',
             'foto' => 'required|mimes:png,jpeg,jpg|max:1024',
@@ -94,7 +96,7 @@ class DaftarController extends Controller
         
         $pendaftar->save();
 
-        return redirect('/')->with('success', 'Pendaftaran telah dikirim');
+        return redirect('/success');
 
     }
 
@@ -143,4 +145,5 @@ class DaftarController extends Controller
         $pendaftar->delete();
         return redirect('admin')->with('success deleted','Product has been deleted');
     }
+
 }

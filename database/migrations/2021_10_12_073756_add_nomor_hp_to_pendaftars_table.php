@@ -14,7 +14,7 @@ class AddNomorHpToPendaftarsTable extends Migration
     public function up()
     {
         Schema::table('pendaftars', function (Blueprint $table) {
-            $table->integer('nomor_hp');
+            $table->string('nomor_hp')->change();
         });
     }
 

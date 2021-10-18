@@ -340,18 +340,18 @@
   <!--need section -->
 
   <!-- testimoni section -->
-  <section class="expert_section layout_padding">
+  <section class="expert_section layout_padding" id="testimoni">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2>
+        <h2 data-aos="zoom-in" data-aos-duration="1000">
           Testimoni
         </h2>
-        <p>
+        <p data-aos="zoom-in" data-aos-duration="1000">
           Testimoni kerja praktik dari teman-teman yang sudah pernah kerja praktek di Telkom Witel NTB.
         </p>
       </div>
       <div class="row">
-        <div class="col-md-6 col-lg-4 mx-auto">
+        <div class="col-md-6 col-lg-4 mx-auto" data-aos="zoom-in" data-aos-duration="1000">
           <div class="box">
             <div class="img-box">
               <img src="{{asset('/telkom/images/arif.jpg')}}">
@@ -375,7 +375,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 mx-auto">
+        <div class="col-md-6 col-lg-4 mx-auto " data-aos="zoom-in" data-aos-duration="1000">
           <div class="box">
             <div class="img-box">
               <img src="{{asset('/telkom/images/kadek.jpeg')}}" alt="">
@@ -399,7 +399,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 mx-auto">
+        <div class="col-md-6 col-lg-4 mx-auto" data-aos="zoom-in" data-aos-duration="1000">
           <div class="box">
             <div class="img-box">
               <img src="{{asset('/telkom/images/erlyn.png')}}" alt="">
@@ -451,22 +451,12 @@
           </h4>
           <div class="social_container">
             <div>
-              <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
+              <a href="https://youtube.com/channel/UCLB605FgHEIF1Y-Rt5jkLRQ">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
               </a>
             </div>
             <div>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div>
-              <a href="">
+              <a href="https://instagram.com/indihome.telkomntb?utm_medium=copy_link">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
             </div>
@@ -484,7 +474,7 @@
   <div class="container">
     <p>
       &copy; <span id="displayYear"></span> All Rights Reserved By
-      <a href="https://html.design/">Telkom Witel NTB</a>
+      <a href="/">Telkom Witel NTB</a>
     </p>
   </div>
 </footer>
